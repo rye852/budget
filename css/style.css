@@ -1,0 +1,241 @@
+:root {
+  --dark-color: #fff;
+  --dark-background: #111;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--dark-background);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background-color: var(--dark-color);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Noto Sans', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--dark-background);
+}
+
+/* Start Styling Forms*/
+body > h1 {
+  font-size: 40px;
+  margin: 0.7em 2em;
+  color: var(--dark-color);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  body > h1 {
+    font-size: 28px;
+  }
+}
+.container {
+  margin: 2em;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.container .forms {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--dark-color);
+  flex-basis: 40%;
+}
+.container .forms form {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  border: 2px solid #03ac13;
+  border-radius: 6px;
+  caret-color: #03ac13;
+}
+
+.forms form label {
+  font-size: 24px;
+  margin-bottom: 0.67em;
+}
+.forms form label:nth-of-type(2) {
+  margin-top: 0.67em;
+}
+.forms form input:not([type='submit']) {
+  background-color: var(--dark-color);
+  color: var(--dark-background);
+  border-radius: 6px;
+  outline: none;
+  padding: 0.5em;
+  border: 1px solid #03ac13;
+  margin-bottom: 1em;
+  transition: 0.3s;
+  font-size: 20px;
+}
+.forms form input:not([type='submit']):focus {
+  box-shadow: rgba(0, 255, 0, 0.4) 0px 3px 8px;
+}
+.forms form:last-of-type {
+  border-color: red;
+  caret-color: red;
+  pointer-events: none;
+  opacity: 0.3;
+}
+.forms form:last-of-type input,
+.forms form:last-of-type button {
+  border-color: rgba(255, 0, 0, 1);
+}
+.forms form:last-of-type input:not([type='submit']):focus {
+  box-shadow: rgba(255, 0, 0, 0.4) 0px 3px 8px;
+}
+.forms form:last-of-type input:not([type='submit']):first-of-type {
+  margin-bottom: 0;
+}
+.forms form button {
+  border: 1px solid #03ac13;
+  color: var(--dark-color);
+  background-color: var(--dark-background);
+  width: fit-content;
+  padding: 0.5em 1em;
+  font-size: 20px;
+  border-radius: 6px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.forms form button:hover {
+  background-color: #03ac13;
+}
+.forms form:last-of-type button {
+  border-color: RED;
+}
+.forms form:last-of-type button:hover {
+  background-color: red;
+}
+/* Out Put */
+.container .outPut {
+  flex: 1;
+}
+.container .outPut .info {
+  color: var(--dark-color);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  align-items: center;
+  text-align: center;
+}
+.container .outPut .info > div > h2 {
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0.67em;
+}
+.container .outPut .info > div svg {
+  width: 100px;
+  height: 100px;
+  font-size: 40px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  margin: auto;
+}
+
+.container .outPut .info > div > .mony {
+  font-size: 50px;
+  font-weight: 500;
+  color: var(--dark-color);
+}
+
+.container .outPut table {
+  width: 100%;
+  margin: 0;
+  margin: 2em;
+  text-align: center;
+}
+.container .outPut table tr {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--dark-color);
+}
+.container .outPut table td {
+  width: calc(100% / 3);
+  font-size: 22px;
+}
+table .delete {
+  color: var(--dark-color);
+  transition: 0.2s;
+  cursor: pointer;
+}
+table .delete:hover {
+  color: red;
+}
+table .edit {
+  color: var(--dark-color);
+  transition: 0.2s;
+  cursor: pointer;
+}
+table .edit:hover {
+  color: #03ac13;
+}
+button.clear {
+  border: 1px solid var(--dark-color);
+  color: var(--dark-color);
+  background-color: var(--dark-background);
+  width: fit-content;
+  padding: 0.5em 1em;
+  font-size: 20px;
+  border-radius: 6px;
+  transition: 0.3s;
+  cursor: pointer;
+  margin: auto;
+}
+button.clear:hover {
+  background-color: red;
+}
+table tr td:first-of-type {
+  color: var(--dark-color);
+}
+@media (max-width: 892px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .forms form {
+    padding: 0.5em;
+    align-items: center;
+  }
+  .forms form label {
+    font-size: 18px;
+  }
+  .forms form button {
+    font-size: 18px;
+  }
+  .forms form input:not([type='submit']) {
+    font-size: 16px;
+  }
+  /* Out Put */
+  .container .outPut {
+    width: 100%;
+  }
+  .container .outPut .info {
+    grid-template-columns: 1fr;
+  }
+  .container .outPut .info > div {
+    margin-bottom: 1em;
+  }
+  .container .outPut .info > div > h2 {
+    font-size: 25px;
+  }
+  .container .outPut .info > div > svg {
+    width: 60px;
+    height: 60px;
+  }
+  .container .outPut .info > div > .mony {
+    font-size: 30px;
+  }
+}

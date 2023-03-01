@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <script src="js/all.min.js"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+    <!-- Normalaze -->
+    <link rel="stylesheet" href="css/normalaze.css" />
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Budget App</h1>
+    <div class="container">
+      <div class="forms">
+        <form action="#" class="desiable">
+          <label for="budget">Please Enter Your Budget</label>
+          <input type="number" name="budget" id="budget">
+          <button value="calculate" class="calc">calculate</button>
+        </form>
+        <form action="#">
+          <label for="expense">Please Your Expanse Name</label>
+          <input type="text" name="expense" id="expense">
+          <label for="amount">Please Enter Your Expense Amount</label>
+          <input type="number" name="amount" id="amount">
+          <button class="add" value="Add Expense">Add Expense</button>
+        </form>
+        <button class="clear">clear All</button>
+      </div>
+      <div class="outPut">
+        <div class="info">
+          <div class="budget">
+            <h2>Budget</h2>
+            <i class="fa-solid fa-money-bill"></i>
+            <h3 class="mony">0$</h3>
+          </div>
+          <div class="expense">
+            <h2>expense</h2>
+            <i class="fa-solid fa-money-check-dollar"></i>
+            <h3 class="mony">0$</h3>
+          </div>
+          <div class="balance">
+            <h2>balance</h2>
+            <i class="fa-solid fa-scale-balanced"></i>
+            <h3 class="mony">0$</h3>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <td> Title</td>
+            <td> Value</td>
+            <td></td>
+          </thead>
+        </table>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
